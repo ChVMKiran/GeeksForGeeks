@@ -53,8 +53,8 @@ class Solution {
         int ans = 0, pre = 0;
         for(int i = 0; i < N; i++) {
             pre ^= arr[i];
-            insert(pre, root);
             ans = max(ans, query(pre, root));
+            insert(pre, root);
         }
         return ans;
     }
